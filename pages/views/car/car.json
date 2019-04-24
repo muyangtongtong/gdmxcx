@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "goodnormal": "/components/goodnormal",
+    "goodgift": "/components/goodgift",
+    "lineone": "/components/lineone",
+    "linetwo": "/components/linetwo",
+    "linethree": "/components/linethree",
+    "linefour": "/components/linefour",
+    "textnormal": "/components/textnormal",
+    "textgift": "/components/textgift"
+  },
+  "navigationBarTitleText": "购物车",
+  "disableScroll":true,
+  "disableSwipeBack":true
+}

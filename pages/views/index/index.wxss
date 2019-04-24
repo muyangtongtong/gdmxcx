@@ -1,0 +1,4 @@
+/* pages/views/index/index.wxss */
+.header{
+  text-align: center;
+}

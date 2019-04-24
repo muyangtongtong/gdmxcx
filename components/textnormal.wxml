@@ -1,0 +1,46 @@
+<!--components/textnormal.wxml-->
+<view class="text_normal">
+  <view class="s1">
+    <checkbox value="{{propa.ischoice}}" wx:if="{{propa.ischoice != '2'}}" checked="{{propa.ischoice==1? true: false}}" />
+  </view>
+  <view class="s2">
+    <navigator hover-class="navigator-hover" class="t{{propa.icontype}}" wx:if="{{propa.icontype!=0}}">
+      <navigator class="full-icon full-gray-icon">{{propa.iconlabel}}</navigator>
+    </navigator>
+    <navigator hover-class="navigator-hover" class="t{{propa.icontype}}" wx:else="{{propa.icontype==0}}">{{propa.text1}}</navigator>
+    <view class="s2_button" wx:if="{{propa.clicktype == 5}}">
+      <button size="mini" wx:if="JSON.parse(propa.clicktype).type == 1" plain="{{plain}}">任选组合</button>
+      <button size="mini" wx:elif="JSON.parse(propa.clicktype).type == 2">赠品组合</button>
+      <button size="mini" wx:else="JSON.parse(propa.clicktype).type == 3">加价购</button>
+    </view>
+  </view>
+  <view class="s3" wx:if="{{propa.isselpromo == 1}}">
+    <view class="cuxiao f1" wx:if="{{propa.operstatus==0 && propa.isselepromo==1}}">
+      <text>促销</text>
+    </view>
+  </view>
+  <view class="s4">
+    <text wx:if="{{propa.retailprice}}">{{'￥'+propa.retailprice}}</text>
+  </view>
+  <view class="s5" wx:if="{{propa.operstatus==0}}">
+    <view wx:if="{{propa.iseditqty == '0'}}">
+      <view wx:if="{{propa.calqtytype==0}}">{{propa.qty+'X'+ propa.updateqty}}</view>
+      <view wx:elif="{{propa.calqtytype==1}}">{{'X'+ propa.updateqty}}</view>
+    </view>
+    <view wx:elif="{{propa.iseditqty == 1}}">
+      <navigator wx:if="{{propa.updateqty==propa.minqty}}">-</navigator>
+      <navigator wx:elif="{{propa.updateqty!='1'}}">-</navigator>
+      <input value="{{propa.updateqty}}"></input>
+      <navigator>+</navigator>
+    </view>
+  </view>
+  <view class="s6" wx:if="propa.showtype=='4'">
+    <text class="redu0" wx:if="{{propa.reduceamt==0}}">{{'￥'+ propa.amt}}</text>
+    <view class="redu1" wx:elif="{{propa.reduceamt!=0}}">
+      <text wx:if="{{propa.retailprice}}">{{'￥'+propa.retailprice}}</text>
+      <text wx:if="{{propa.retailprice}}">减</text>
+      <text wx:if="{{propa.retailprice}}">{{'￥'+ propa.reduceamt}}</text>
+    </view>
+  </view>
+
+</view>

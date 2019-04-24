@@ -1,0 +1,35 @@
+<!--pages/views/car/car.wxml-->
+<view wx:for="{{datas.groups}}" wx:key="{{index1}}" wx:for-index="index1" wx:for-item="item1">
+  <view wx:for="{{item1.elements}}" wx:key="{{index}}" wx:for-index="index" wx:for-item="item">
+    <view wx:if="{{item.eletype == '1'}}">
+      <view wx:if="{{item.showtype == '1'}}">
+        <lineone></lineone>
+      </view>
+      <view wx:elif="{{item.showtype == '2'}}">
+        <linetwo></linetwo>
+      </view>
+      <view wx:elif="{{item.showtype == '3'}}">
+        <linethree></linethree>
+      </view>
+      <view wx:else="{{item.showtype == '4'}}">
+        <linefour></linefour>
+      </view>
+    </view>
+    <view wx:elif="{{item.eletype == '2'}}">
+      <view wx:if="{{item.isgift == '0'}}">
+        <textnormal propa="{{item}}"></textnormal>
+      </view>
+      <view wx:else="{{item.isgift == '1'}}">
+        <textgift></textgift>
+      </view>
+    </view>
+    <view wx:elif="{{item.eletype == '3'}}">
+      <view wx:if="{{item.isgift == '0'}}">
+        <goodnormal propa="{{item}}"></goodnormal>
+      </view>
+      <view wx:else="{{item.isgift == '0'}}">
+        <goodgift></goodgift>
+      </view>
+    </view>
+  </view>
+</view>

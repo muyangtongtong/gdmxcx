@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/views/index/index",
+    "pages/views/car/car",
+    "pages/views/prolist/prolist",
+    "pages/views/mypage/mypage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "components/goodnormal",
+    "components/goodgift",
+    "components/lineone",
+    "components/linetwo",
+    "components/linethree",
+    "components/linefour",
+    "components/textnormal",
+    "components/textgift"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "百果园水果商城",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#4c4c4c",
+    "selectedColor": "#3cc51f",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/views/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/views/prolist/prolist",
+        "text": "商品列表"
+      },
+      {
+        "pagePath": "pages/views/car/car",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/views/mypage/mypage",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "resizable": true
+}

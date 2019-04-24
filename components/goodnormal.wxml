@@ -1,0 +1,29 @@
+<!--components/goodnormal.wxml-->
+<view class="min-classObject">
+  <view class="s1">
+    <checkbox value="{{propa.ischoice}}" wx:if="{{propa.ischoice != '2'}}" checked="{{propa.ischoice==1? true: false}}" />
+  </view>
+  <view class="s2">
+    <image style="width: 80px; height: 80px; background-color: #eeeeee;" src="{{propa.productvarimage}}"></image>
+    <view class="s2_right">
+      <navigator class="s2_name">{{propa.productvarname}}</navigator>
+      <view class="s2_field">
+        <text wx:if="{{propa.fieldname2}}">{{propa.fieldname2 + ':' + propa.fielditemname2}}</text>
+        <text wx:if="{{propa.fieldname1}}">{{propa.fieldname1 + ':' + propa.fielditemname1}}</text>
+      </view>
+      <view class='s2_bottom'>
+        <text class="bottom_text">{{'￥' + propa.updateqty}}</text>
+        <view class="s5_edit" wx:if="{{propa.iseditqty == '0'}}">
+          <text wx:if="{{propa.calqtytype==0}}">{{propa.qty+ 'X' + propa.updateqty}}</text>
+          <text wx:elif="{{propa.calqtytype==1}}">{{'X' + propa.updateqty}}</text>
+        </view>
+        <view class="s5_edit1" wx:elif="{{propa.iseditqty == 1}}">
+          <navigator wx:if="{{propa.updateqty == propa.minqty}}" class='disabled'>-</navigator>
+          <navigator wx:elif="{{propa.updateqty != 1}}" class="abled">-</navigator>
+          <input>+</input>
+          <navigator class="abled">+</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

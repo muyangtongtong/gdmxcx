@@ -1,0 +1,121 @@
+/* components/goodnormal.wxss */
+.min-classObject{
+    width: 100%;
+    height:204rpx;
+    position: relative;
+    user-select: none; 
+    border:1px solid blue;
+  }
+.min-classObject .s1, .min-classObject .s2{
+  display: inline-block;
+  height:200rpx;
+}
+
+.min-classObject .s1 {
+  width: 8%;
+  float: left;
+  line-height: 140rpx;
+  padding-left:10rpx;
+  border:1px solid red;
+}
+.min-classObject .s2 {
+  width:89%;
+  line-height: 240rpx;
+  float: right;
+  border:1px solid red;
+}
+.min-classObject .s2 image{
+  border:1px solid #aaa;
+  border-radius: 140rpx;
+  display: inline-block;
+  width:140rpx;
+  height:140rpx;
+  margin-bottom: 9rpx;
+}
+.min-classObject .s2 .s2_right{
+  width:50%;
+  margin-left:20rpx;
+  display:inline-block;
+  height:200rpx;
+  overflow: hidden;
+  font-size: 26rpx;
+  border:1px solid green;
+}
+.min-classObject .s2 .s2_right .s2_name{
+  display: block;
+  overflow: hidden;
+  line-height: 40rpx!important;
+  background: #fff;
+}
+.min-classObject .s2 .s2_right .s2_field {
+  text-align: left;
+  height: 36rpx;
+  display: block;
+  margin: 10rpx 0;
+  overflow: hidden;
+}
+.min-classObject .s2 .s2_right .s2_bottom {
+  display: block;
+  bottom: 0px;
+  height:40rpx;
+  border:1px solid blue;
+}
+.min-classObject .s2 .s2_right .s2_bottom .bottom_text {
+  float: left;
+  display: inline-block;
+  height:40rpx;
+  line-height:40rpx;
+  border:1px solid red;
+}
+
+ .min-classObject .s2 .s2_right .s2_bottom .s5_edit {
+  height: 40rpx;
+  line-height: 40rpx;
+  float: right;
+  border:1px solid blue;
+}
+.min-classObject .s2 .s2_right .s2_bottom .s5_edit1 {
+  background-color: #fff;
+  border: 1px solid #cacbcb;
+  border-radius: 4px;
+  color:#666;
+  height: 22px;
+  line-height: 20px;
+  display: block;
+  text-align: right
+}
+ .min-classObject .s2 .s2_right .s2_bottom .s5_edit1 navigator{
+   border:1px solid #aaa
+ }
+
+ 
+.min-classObject .s2 .s2_right .s2_bottom .s5_edit1:hover{
+  color: #409EFF;
+  border:1px solid #409EFF;
+}
+.min-classObject .s2 .s2_right .s2_bottom .s5_edit1 .abled:hover{
+  color: #409EFF;
+}
+.min-classObject .s2 .s2_right .s2_bottom input{
+  display: inline-block;
+  width: 33px;
+  height: 16px;
+  line-height: 17px;
+  text-align: center;
+  border:none;
+  background: #fff;
+}
+.min-classObject .s2 .s2_right .s2_bottom .s5_edit1 navigator{
+  text-align: center;
+  margin:0;
+  padding: 0px;
+  width: 13px;
+  height: 20px;
+  display: inline-block;
+}
+.min-classObject .s2 .s2_right .s2_bottom .s5_edit1 navigator:first-child{
+  border-right: 1px solid #cacbcb;
+}
+.min-classObject .s2 .s2_right .s2_bottom .s5_edit1 navigator:last-child{
+  border-left: 1px solid #cacbcb;
+}

@@ -1,0 +1,16 @@
+/* components/textnormal.wxss */
+.text_normal{
+    width: 99.9%;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    border: 1px solid red
+  }
+  .text_normal .s1, .text_normal .s2, .text_normal .s3, .text_normal .s4, .text_normal .s5, .text_normal .s6{
+    display: inline-block;
+    border:1px solid red;
+    height:30px;
+    line-height: 30px;
+    overflow: hidden;
+  }
+  
