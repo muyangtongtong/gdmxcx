@@ -1,0 +1,59 @@
+<style lang="less">
+  page{
+    background-color: #f4f4f4;
+    font-size: 24rpx;
+    color: #333
+  }
+  image{
+    vertical-align: top
+  }
+</style>
+
+<script>
+import wepy from 'wepy'
+import 'wepy-async-function'
+
+export default class extends wepy.app {
+  constructor () {
+    super()
+    this.use('promisify')
+  }
+  config = {
+    pages: ['pages/index', 'pages/category', 'pages/cart', 'pages/me', 'pages/goods_list', 'pages/goods_detail', 'pages/orders'],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#ff2d4a',
+      navigationBarTitleText: '果多美',
+      navigationBarTextStyle: 'white'
+    },
+    tabBar: {
+      'color': '#4c4c4c',
+      'selectedColor': '#3cc51f',
+      'backgroundColor': '#fff',
+      'borderStyle': 'black',
+      list: [
+        {
+          pagePath: 'pages/index',
+          text: '首页'
+        },
+        {
+          pagePath: 'pages/category',
+          text: '分类'
+        },
+        {
+          pagePath: 'pages/cart',
+          text: '购物车'
+        },
+        {
+          pagePath: 'pages/me',
+          text: '我的'
+        }
+      ]
+
+    }
+  }
+
+  onLaunch() {
+  }
+}
+</script>

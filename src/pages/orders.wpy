@@ -1,0 +1,20 @@
+<style lang="less">
+</style>
+<template>
+  <view class="container">
+    订单列表
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Orders extends wepy.page {
+    config = {
+      navigationBarTitleText: '订单列表'
+    }
+    onLoad() {
+      console.log('onLoad')
+    }
+  }
+</script>

@@ -1,0 +1,64 @@
+<style lang="less">
+</style>
+<template>
+  <view wx:for="{{datas.groups}}" wx:key="index" wx:for-index="index" wx:for-item="item">
+      <repeat for="{{item.elements}}" key="index1" index="index1" item="item1">
+        <!-- <view wx:if="{{item1.eletype == '1'}}">
+          <view wx:if="{{item1.showtype == '1'}}">
+            <lineone></lineone>
+          </view>
+        </view> -->
+        <!-- 线的判断开始 -->
+            <lineone></lineone>
+            <!-- <linetwo wx:elif="item1.showtype == '2'|| item1.eletype == '1'"></linetwo>
+            <linethree wx:elif="item1.showtype == '3'|| item1.eletype == '1'"></linethree>
+            <linefour wx:elif="item1.showtype == '4'|| item1.eletype == '1'"></linefour> -->
+        <!-- 线的判断结束 -->
+        <!-- 文本判断开始 -->
+            <!-- <textnormal wx:elif="item1.eletype == '2'|| item1.isgift == '0'"></textnormal> -->
+            <!-- <textgift wx:elif="item1.eletype == '2'|| item1.isgift == '1'"></textgift> -->
+        <!-- 文本判断结束 -->
+        <!-- 商品判断开始 -->
+            <!-- <goodnormal wx:elif="item1.eletype == '3'|| item1.isgift == '0'"></goodnormal> -->
+            <!-- <goodgift  wx:elif="item1.eletype == '3'|| item1.isgift == '1'"></goodgift> -->
+        <!-- 商品判断结束 -->
+    </repeat>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import api from '../api/api'
+  import goodnormal from '../component/goodnormal'
+  import goodgift from '../component/goodgift'
+  import textnormal from '../component/textnormal'
+  import textgift from '../component/textgift'
+  import lineone from '../component/lineone'
+  import linetwo from '../component/linetwo'
+  import linethree from '../component/linethree'
+  import linefour from '../component/linefour'
+  export default class Cart extends wepy.page {
+    components = {
+      goodnormal,
+      goodgift,
+      textnormal,
+      textgift,
+      lineone,
+      linetwo,
+      linethree,
+      linefour
+    }
+    config = {
+      navigationBarTitleText: '购物车'
+    }
+    data = {
+      datas: []
+    }
+    onLoad() {
+      api.intoShowCart().then(res => {
+        this.datas = res.data
+        console.log('this.datas=>', this.datas)
+      })
+    }
+  }
+</script>

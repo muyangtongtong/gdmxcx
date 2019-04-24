@@ -1,0 +1,20 @@
+<style lang="less">
+</style>
+<template>
+  <view class="container">
+    商品详情页面
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class GoodsDetail extends wepy.page {
+    config = {
+      navigationBarTitleText: '商品详情'
+    }
+    onLoad() {
+      console.log('onLoad')
+    }
+  }
+</script>

@@ -1,0 +1,22 @@
+<style lang="less">
+</style>
+<template>
+<SearchBar></SearchBar>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  import SearchBar from '../component/search_bar'
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '果多美'
+    }
+    components = {
+      SearchBar
+    }
+    onLoad() {
+
+    }
+  }
+</script>

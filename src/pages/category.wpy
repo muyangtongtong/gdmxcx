@@ -1,0 +1,23 @@
+<style lang="less">
+page{
+
+}
+</style>
+<template>
+  <view class="container">
+    分类页面
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class Category extends wepy.page {
+    config = {
+      navigationBarTitleText: '分类页面'
+    }
+    onLoad() {
+      console.log('onLoad')
+    }
+  }
+</script>
